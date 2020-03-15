@@ -4,6 +4,9 @@
     --primary-color:rgb(41, 56, 194);
     --secondary-color: #ff9900;
 }
+*{
+    box-sizing: border-box;
+}
 .navbar{
    height: 20%;
    background-color: var(--secondary-color) !important;
@@ -31,9 +34,10 @@
 // styling the title "how our servies work"
 .sub-title{
     margin: 1rem 0;
+    text-transform: uppercase;
     text-align: center;
     font-weight: bold;
-    color:var(--secondary-color);
+    color:var(--primary-color);
 }
 
 // formating the icons in the services section 
@@ -46,4 +50,27 @@
     text-transform: uppercase;
     font-weight: bold;
     color: var(--secondary-color);
+}
+// formting the serach section of the page
+
+.search-container{
+position: relative;
+
+}
+.search-form{
+    z-index: 1;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
+#search-img{
+    opacity: 0.5;
+}
+.footer{
+    height:120px;
+    background-color: rgba(0,0,0, 0.7);
+}
+.card{
+    margin: 1rem 0;
 }
