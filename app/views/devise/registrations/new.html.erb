@@ -1,38 +1,65 @@
-<h2>Sign up</h2>
+<%= render 'layouts/extras/nav'%>
+<h2 class="sub-title">Welcome to Sign up page</h2>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
-  </div>
+<div class="container"> <!-- start of container-->
+<%= render "devise/shared/error_messages", resource: resource %>
+  <div class="row"> <!-- start of row-->
+    <div class="col-lg-6 col-md-6 col-xs-12">
+       <h3 class="sub-title"align="center">Terms and Condition</h3>
+       <p> By signing up you will agree to ur terms and conditions</p>
+       <ul>
+        <li>Our system is secure</li>
+        <li>we don't share your email third parties</li>
+        <li>We use cookies for the better service providing</li>
+        <li>For full detailed terms and condition refer to below link</li>
+       </ul>
+       <a href="#"> terms and condition document</a>
+    </div>
+    <div class="col-md-6 col-xs-12">
+    <!-- start  of form-->
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      
+      <div class="field">
+        <%= f.label :name %><br />
+        <%= f.text_field :name, class: "form-control form-control-lg" %>
+      </div>
+    
+      <div class="field">
+      <%= f.label :username %><br />
+      <%= f.text_field :username,class: "form-control form-control-lg" %>
+    </div>
+    
+      <div class="field">
+        <%= f.label :email %><br />
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control form-control-lg" %>
+      </div>
+    
+      <div class="field">
+        <%= f.label :password %>
+        <% if @minimum_password_length %>
+        <em>(<%= @minimum_password_length %> characters minimum)</em>
+        <% end %><br />
+        <%= f.password_field :password, autocomplete: "new-password", class: "form-control form-control-lg" %>
+      </div>
+    
+      <div class="field">
+        <%= f.label :password_confirmation %><br />
+        <%= f.password_field :password_confirmation, autocomplete: "new-password",class: "form-control form-control-lg" %>
+      </div>
+    
+      <div class="actions">
+      <br>
+        <%= f.submit "Sign up", class: "btn btn-lg btn-primary" %>
+      </div>
+    <% end %>
+    <br>
+    <%= render "devise/shared/links" %>
+    <!-- end  of form-->
+    </div>
 
-  <div class="field">
-  <%= f.label :username %><br />
-  <%= f.text_field :username, autofocus: true, autocomplete: "username" %>
-</div>
+  </div> <!-- end of row-->
+</div> <!-- end of container-->
+<br>
+<%= render"layouts/extras/footer"%>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
 
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
