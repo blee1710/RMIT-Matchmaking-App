@@ -10,7 +10,7 @@ class ApplicationController < ActionController::Base
     profile_pages_main_path
   end 
   # this is to direct the user to the main page after logout  
-  def after_sign_out_path_for(resource)
+  def after_sign_out_path(resource)
     root_path
   end 
   
