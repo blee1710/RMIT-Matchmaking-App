@@ -8,7 +8,7 @@ class User
   ## Database authenticatable
   field :id,                 type:Integer
   field :name,               type: String, default:""
-  field :username,           type: String, default:""
+  field :phone,              type: String, default:""
 
   field :email,              type: String, default: ""
   field :encrypted_password, type: String, default: ""
