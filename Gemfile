@@ -5,6 +5,8 @@ ruby '2.7.0'
 
 #MongoDB Gems
 gem 'mongoid', '~> 7.0.5'
+# uing devise for the user authentication
+gem 'devise'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.2', '>= 6.0.2.1'
