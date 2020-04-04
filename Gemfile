@@ -27,6 +27,12 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
+#Paperclip gem for file uploads
+
+gem "kt-paperclip", "~> 6.2.0"
+gem "mongoid-paperclip"
+
+
 #Font Awesome Gem
 gem 'font_awesome5_rails'
 

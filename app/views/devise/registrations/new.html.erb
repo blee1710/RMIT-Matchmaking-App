@@ -19,6 +19,10 @@
     <div class="col-md-6 col-xs-12">
     <!-- start  of form-->
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      <div class="field">
+          <%= f.label :avatar %>: <span class="asterisk">*</span><br />
+          <%=f.file_field :avatar, class: 'image_file_input' %>
+      </div>
 
       <div class="field">
         <%= f.label :name %>: <span class="asterisk">*</span><br />
@@ -46,6 +50,11 @@
       <div class="field">
         <%= f.label :password_confirmation %>:<span class="asterisk">*</span<br />
         <%= f.password_field :password_confirmation, autocomplete: "new-password",class: "form-control form-control-lg" %>
+      </div>
+
+      <div class="field">
+        <%= f.label :about %>: <span class="asterisk">*</span><br />
+        <%= f.text_field :about, class: "form-control form-control-lg" %>
       </div>
 
       <div class="actions">
