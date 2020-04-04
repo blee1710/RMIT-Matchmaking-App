@@ -12,7 +12,7 @@
    height: 20%;
    background-color: var(--secondary-color) !important;
 }
-// formtting the nav brand 
+// formtting the nav brand
 .navbar-brand{
     text-transform: uppercase;
     font-weight: bold;
@@ -48,7 +48,7 @@
     color:var(--primary-color);
 }
 
-// formating the icons in the services section 
+// formating the icons in the services section
 .custom-card{
     margin: 1rem 0;
     text-align: center;
@@ -89,4 +89,9 @@ position: relative;
 }
 .asterisk{
     color: red;
+}
+
+// edit formatting
+.edit-border {
+  padding-top: 2vh
 }

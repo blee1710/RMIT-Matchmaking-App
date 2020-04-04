@@ -1,6 +1,7 @@
 <nav class="navbar navbar-light bg-primary">
-    <a class="navbar-brand" href="#">RMIT MATCHWORS</a>
+    <a class="navbar-brand" href="#">RMIT MATCHWORKS</a>
     <div class="custom-btn">
+        <%= link_to("Log Out", destroy_user_session_path, class:"btn btn-primary")%>
         <%= link_to "Back to Home", root_path, class:"btn btn-primary"%>
     </div>
 </nav>
