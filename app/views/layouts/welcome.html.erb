@@ -1,2 +1,135 @@
-<h1> Hello, world! This project is a work in progress!</h1>
-<h2> Font Awesome Test: <%=fa_icon('camera-retro')%> </h2>
+
+<nav class="navbar navbar-light bg-primary">
+    <a class="navbar-brand" href="#">RMIT MATCHWORKS</a>
+    <div class="custom-btn">
+        <% if user_signed_in? %>
+          <%= link_to "Profile", profile_pages_main_path, class:"btn btn-primary" %>
+        <% else %>
+          <%= link_to "Sign Up", new_user_registration_path, class:"btn btn-primary"%>
+          <%= link_to "Sign In", new_user_session_path, class: "btn btn-primary"%>
+        <% end %>
+    </div>
+</nav>
+<!-- end of Nav -->
+<div class="main-container">
+    <%= image_tag("work.jpg", class:"w-100", alt:"main picture here") %>
+    <div class="register-btn">
+      <h1 class="main-title">Matches Professonals<h1>
+      <h2 class="main-title">For your Task</h2>
+      <button class="btn btn-primary">I want to Hire</button>
+      <button class="btn btn-primary">I want to work</button>
+    </div>
+</div>
+<!-- services section starts here -->
+<div class="container center">
+  <h3 class="sub-title"> How Our Services Work </h3>
+  <div class="row">
+    <div class="col-lg-3 col-md-6 col-xs-12">
+      <div class="custom-card">
+        <%= image_tag("login.png", width: "100px", height:"100px") %>
+        <h6 class="service"> First Register</h6>
+      </div>
+    </div>
+    <div class="col-lg-3 col-md-6 col-xs-12">
+      <div class="custom-card">
+        <%= image_tag("post.png", width: "100px", height:"100px") %>
+        <h6 class="service"> Post a Job</h6>
+      </div>
+    </div>
+    <div class="col-lg-3 col-md-6 col-xs-12">
+      <div class="custom-card">
+        <%= image_tag("note.png", width: "100px", height:"100px") %>
+        <h6 class="service">Get a quote</h6>
+      </div>
+    </div>
+    <div class="col-lg-3 col-md-6 col-xs-12">
+    <div class="custom-card">
+        <%= image_tag("assign.png", width: "100px", height:"100px") %>
+        <h6 class="service">Assign the Job</h6>
+      </div>
+    </div>
+  </div>
+</div> <!-- end of container -->
+<!-- services section finishes here -->
+
+<!-- search bar starts here  -->
+<h3 class="sub-title">Search for treade or  Work </h3>
+<div class="search-container">
+  <%= image_tag("bg.jpg", id: "search-img", width: "100%", height:"200px")%>
+  <div class="search-form">
+    <form class="form-inline">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search for Work or Worker" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+ </div>
+
+ <!-- section of recnet posts starts here-->
+ <div class="container center">
+ <h3 class="sub-title">Recent posted Jobs </h3>
+    <div class="row">
+      <div class="col-lg-3 col-md-6 col-xs-12">
+        <!-- first Card starts here-->
+        <div class="card" style="width: 16rem;">
+          <%= image_tag("work.jpg", class:"card-img-top",  alt:"Card image cap") %>
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          </div>
+        <div class="card-body">
+          <a href="#" class="btn btn-primary">Read More</a>
+        </div>
+      </div>
+        <!-- second Card finishes here-->
+      </div>
+      <div class="col-lg-3 col-md-6 col-xs-12">
+      <!-- first Card starts here-->
+      <div class="card" style="width: 16rem;">
+        <%= image_tag("work.jpg", class:"card-img-top",  alt:"Card image cap") %>
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+      <div class="card-body">
+        <a href="#" class="btn btn-primary">Read More</a>
+      </div>
+    </div>
+      <!-- second Card finishes here-->
+      </div>
+      <div class="col-lg-3 col-md-6 col-xs-12">
+      <!-- third Card starts here-->
+      <div class="card" style="width: 16rem;">
+        <%= image_tag("work.jpg", class:"card-img-top",  alt:"Card image cap") %>
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+      <div class="card-body">
+        <a href="#" class="btn btn-primary">Read More</a>
+      </div>
+    </div>
+      <!-- third Card finishes here-->
+      </div>
+      <div class="col-lg-3 col-md-6 col-xs-12">
+      <!-- third Card starts here-->
+      <div class="card" style="width: 16rem;">
+        <%= image_tag("work.jpg", class:"card-img-top",  alt:"Card image cap") %>
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+      <div class="card-body">
+        <a href="#" class="btn btn-primary">Read More</a>
+      </div>
+    </div>
+      <!-- forth Card finishes here-->
+      </div>
+    </div>
+ </div>
+
+ <!-- Section of recnet post finishes here -->
+
+
+  <%= render"layouts/extras/footer"%>
+
+  <!-- end of search bar here>

@@ -5,6 +5,8 @@ ruby '2.7.0'
 
 #MongoDB Gems
 gem 'mongoid', '~> 7.0.5'
+# uing devise for the user authentication
+gem 'devise'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.2', '>= 6.0.2.1'
@@ -12,6 +14,8 @@ gem 'rails', '~> 6.0.2', '>= 6.0.2.1'
 gem 'puma', '~> 4.1'
 # Use SCSS for stylesheets
 gem 'sass-rails', '>= 6'
+# Use font-awesome-sass
+gem 'font-awesome-sass','~> 4.7.0'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
 gem 'webpacker', '~> 4.0'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
@@ -22,6 +26,12 @@ gem 'jbuilder', '~> 2.7'
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
+
+#Paperclip gem for file uploads
+
+gem "kt-paperclip", "~> 6.2.0"
+gem "mongoid-paperclip"
+
 
 #Font Awesome Gem
 gem 'font_awesome5_rails'

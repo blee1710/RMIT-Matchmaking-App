@@ -1,1 +1,100 @@
 @import 'bootstrap/dist/css/bootstrap';
+// CSS variables for primary and secondary colors
+:root{
+    --primary-color:rgb(41, 56, 194);
+    --secondary-color: #ff9900;
+    --color-gray: #D3D3D3;
+}
+*{
+    box-sizing: border-box;
+}
+.navbar{
+   height: 20%;
+   background-color: var(--secondary-color) !important;
+}
+// formtting the nav brand
+.navbar-brand{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.5rem;
+
+}
+.main-container{
+    position: relative;
+    height:100vh;
+}
+.w-100{
+    width:100%;
+    height:100%;
+}
+.register-btn{
+    text-align: center;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+}
+.main-title{
+    text-transform: uppercase;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+// styling the title "how our servies work"
+.sub-title{
+    margin: 1rem 0;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+    color:var(--primary-color);
+}
+
+// formating the icons in the services section
+.custom-card{
+    margin: 1rem 0;
+    text-align: center;
+}
+.service{
+    margin-top: 2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: var(--secondary-color);
+}
+// formting the serach section of the page
+
+.search-container{
+position: relative;
+
+}
+.search-form{
+    z-index: 1;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
+#search-img{
+    opacity: 0.5;
+}
+.footer{
+    height:120px;
+    background-color: rgba(0,0,0, 0.7);
+}
+.card{
+    margin: 1rem 0;
+}
+// formating sign up page
+.custom-border{
+    border: 1px solid  rgba(0,0,0, 0.3);
+    padding: 1rem 1rem;
+}
+.asterisk{
+    color: red;
+}
+
+// edit formatting
+.edit-border {
+  padding-top: 2vh
+}
+.alert-success, .alert-danger{
+    margin-bottom: 0;
+}
