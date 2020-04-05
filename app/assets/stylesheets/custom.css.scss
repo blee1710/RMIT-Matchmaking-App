@@ -3,6 +3,7 @@
 :root{
     --primary-color:rgb(41, 56, 194);
     --secondary-color: #ff9900;
+    --color-gray: #D3D3D3;
 }
 *{
     box-sizing: border-box;
@@ -11,9 +12,16 @@
    height: 20%;
    background-color: var(--secondary-color) !important;
 }
+// formtting the nav brand
+.navbar-brand{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.5rem;
+
+}
 .main-container{
     position: relative;
-    height:90vh;
+    height:100vh;
 }
 .w-100{
     width:100%;
@@ -40,7 +48,7 @@
     color:var(--primary-color);
 }
 
-// formating the icons in the services section 
+// formating the icons in the services section
 .custom-card{
     margin: 1rem 0;
     text-align: center;
@@ -73,4 +81,20 @@ position: relative;
 }
 .card{
     margin: 1rem 0;
+}
+// formating sign up page
+.custom-border{
+    border: 1px solid  rgba(0,0,0, 0.3);
+    padding: 1rem 1rem;
+}
+.asterisk{
+    color: red;
+}
+
+// edit formatting
+.edit-border {
+  padding-top: 2vh
+}
+.alert-success, .alert-danger{
+    margin-bottom: 0;
 }
