@@ -76,9 +76,29 @@ position: relative;
     opacity: 0.5;
 }
 .footer{
-    height:120px;
+    padding-top: 1.5rem;
+    text-align: center;
+    height:140px;
+    width: 100%;
+    color: white;
     background-color: rgba(0,0,0, 0.7);
+    margin-bottom: 0;
 }
+// styling the items in the footer 
+.fa-facebook-square{
+    color: #3b5998;
+    padding:0.3rem;
+}
+.fa-youtube-square{
+    color: #c4302b;
+    padding: 0.3rem;
+}
+.fa-twitter-square{
+    color:#00acee ;
+    padding:0.3rem;
+
+}
+
 .card{
     margin: 1rem 0;
 }
