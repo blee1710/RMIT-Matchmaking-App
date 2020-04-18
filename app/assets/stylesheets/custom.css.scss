@@ -53,6 +53,21 @@
     margin: 1rem 0;
     text-align: center;
 }
+// this class is made to put the items in the middle of the scrren for the add and workers new pages
+.work-card{
+    margin-left: 20rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    text-align:center;
+}
+// this class is created to put the text in the right place on the page 
+// this is for the new task page only
+.task-info{
+    text-align: left;
+    margin-left:10rem;
+    color:red;
+
+}
 .service{
     margin-top: 2rem;
     text-transform: uppercase;

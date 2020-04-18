@@ -1,27 +1,31 @@
 <%=render "extras/nav"%>
 <h3 class="sub-title">Create Your Add</h3>
-
+<div class="work-card">
 <%= form_for @tasks do |t| %>
+    <p class="task-info">*choose a name for your project or task </p>
     <div class="form-group row">
-        <div class="col-sm-1 col-form-label">
-            <%= t.label :title %>
+        <div class="col-sm-2 col-form-label">
+            <%= t.label :title, class:"text-center" %>
         </div>
-        <div class="col-sm-4">
-            <%= t.text_field :title, class: "form-control", placeholder: "title", autuofocus: true%>
+        <div class="col-sm-6">
+            <%= t.text_field :title, class: "form-control", placeholder: "please choose a proper name for your task", autuofocus: true%>
         </div>
     </div>
+    <p class="task-info">*Tell us more about your task, what needs to be done<br> simple description in a few lines</p>
     <!-- second row -->
     <div class="form-group row">
-        <div class="col-sm-1 col-form-label"> <%= t.label :description %> </div>
-        <div class="col-sm-4">
-            <%= t.text_area :description, class: "form-control", placeholder: "description", autuofocus: true%>
+        <div class="col-sm-2 col-form-label"> <%= t.label :description %> </div>
+        <div class="col-sm-6">
+            <%= t.text_area :description, class: "form-control", placeholder: "try to explain about your task [400 charactes limitation]", rows: "12"%>
         </div>
     </div>    
 
+    <div class="form-group"><p class="task-info" >*Upload some photos</p> <%= link_to "upload photos", "#", class:"btn btn-success"%> </div>
+ 
     <!-- third row -->
     <div class="form-group row">
-        <div class="col-sm-1 col-form-label"> <%= t.label :skills %> </div>
-        <div class="col-sm-4">
+        <div class="col-sm-2 col-form-label"> <%= t.label :skills %> </div>
+        <div class="col-sm-6">
             <%= t.text_field :skills, class: "form-control", placeholder: "type the skills", autuofocus: true%>
         </div>
     </div> 
@@ -33,5 +37,7 @@
         </div>
      </div>
 <%end%>
+
+</div> <!-- end of Card-->
 
 <%=render "extras/footer"%>
