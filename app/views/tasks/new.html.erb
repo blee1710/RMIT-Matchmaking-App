@@ -1,0 +1,37 @@
+<%=render "extras/nav"%>
+<h3 class="sub-title">Create Your Add</h3>
+
+<%= form_for @tasks do |t| %>
+    <div class="form-group row">
+        <div class="col-sm-1 col-form-label">
+            <%= t.label :title %>
+        </div>
+        <div class="col-sm-4">
+            <%= t.text_field :title, class: "form-control", placeholder: "title", autuofocus: true%>
+        </div>
+    </div>
+    <!-- second row -->
+    <div class="form-group row">
+        <div class="col-sm-1 col-form-label"> <%= t.label :description %> </div>
+        <div class="col-sm-4">
+            <%= t.text_area :description, class: "form-control", placeholder: "description", autuofocus: true%>
+        </div>
+    </div>    
+
+    <!-- third row -->
+    <div class="form-group row">
+        <div class="col-sm-1 col-form-label"> <%= t.label :skills %> </div>
+        <div class="col-sm-4">
+            <%= t.text_field :skills, class: "form-control", placeholder: "type the skills", autuofocus: true%>
+        </div>
+    </div> 
+
+    <!-- submit button -->
+    <div class="form-group row">
+        <div class="col-sm-10">
+            <%= t.submit class:"btn btn-primary btn-lg"%>
+        </div>
+     </div>
+<%end%>
+
+<%=render "extras/footer"%>
