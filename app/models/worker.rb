@@ -1,0 +1,10 @@
+class Worker
+  include Mongoid::Document
+  field :name, type: String
+  field :last_name, type: String
+  field :phone, type: String
+  field :post_code, type: Integer
+  field :email, type: String
+  field :business, type: String
+  field :business_type, type: String
+end
