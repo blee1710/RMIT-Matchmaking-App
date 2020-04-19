@@ -1,3 +1,4 @@
+
 <%=render"extras/nav"%>
 <h3 class="sub-title"> Register Your Business Now </h3>
 <div class="work-card">
@@ -39,20 +40,22 @@
             <%= w.text_field :email, class: "form-control", placeholder: "example@yahoo.com", autuofocus: true%>
         </div>
     </div> 
-    <!-- sixth row -->
+
+    <!-- new part starts here -->
     <div class="form-group row">
-        <div class="col-sm-2 col-form-label"> <%= w.label :business %> </div>
-        <div class="col-sm-6">
-            <%= w.text_field :business, class: "form-control", placeholder: "for example constraction", autuofocus: true%>
+        <div  class="col-sm2 col-form-label"><%=w.label "Select Business"%></div>
+        <div class= "col-sm-6">
+            <%= w.select(:business, options_for_select([['Sole Trader','Sole Trader'],['Business Owner','Bussiness Owner'],['Looking for Employment','Looking for Employment']]))%>
         </div>
-    </div> 
+    </div>
+    <!-- new part finishes here -->
     <!-- seventh row -->
     <div class="form-group row">
-        <div class="col-sm-2 col-form-label"> <%= w.label :business_type %> </div>
-        <div class="col-sm-6">
-            <%= w.text_field :business_type, class: "form-control", placeholder: "for example Tiler", autuofocus: true%>
+        <div  class="col-sm2 col-form-label"><%=w.label "Servies provided"%></div>
+        <div class= "col-sm-6">
+            <%= w.select(:business_type, options_for_select([['Air conditioning Specialist','air condition'],['Antenna Services','Antenna'],['Appliance Installation','appliance'],['appliance Repairer','repairer'],['flooring','flooring'],['Bathroom and Shower','bathroom'],['Tiling and Stone','tiling']]))%>
         </div>
-    </div> 
+    </div>
 
     <!-- submit button -->
     <div class="form-group row">
