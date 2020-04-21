@@ -1,0 +1,70 @@
+
+<%=render"extras/nav"%>
+<h3 class="sub-title"> Register Your Business Now </h3>
+<div class="work-card">
+<%= form_for @worker do |w| %>
+    <div class="form-group row">
+        <div class="col-sm-2 col-form-label">
+            <%= w.label :name %>
+        </div>
+        <div class="col-sm-6">
+            <%= w.text_field :name, class: "form-control", placeholder: "name", autuofocus: true%>
+        </div>
+    </div>
+    <!-- second row -->
+    <div class="form-group row">
+        <div class="col-sm-2 col-form-label"> <%= w.label :last_name %> </div>
+        <div class="col-sm-6">
+            <%= w.text_field :last_name, class: "form-control", placeholder: "last name", autuofocus: true%>
+        </div>
+    </div>    
+
+    <!-- third row -->
+    <div class="form-group row">
+        <div class="col-sm-2 col-form-label"> <%= w.label :phone %> </div>
+        <div class="col-sm-6">
+            <%= w.text_field :phone, class: "form-control", placeholder: "0450 44 24 24", autuofocus: true%>
+        </div>
+    </div> 
+    <!-- forth row -->
+    <div class="form-group row">
+        <div class="col-sm-2 col-form-label"> <%= w.label :post_code %> </div>
+        <div class="col-sm-6">
+            <%= w.text_field :post_code, class: "form-control", placeholder: "3019", autuofocus: true%>
+        </div>
+    </div> 
+    <!-- fifth row -->
+    <div class="form-group row">
+        <div class="col-sm-2 col-form-label"> <%= w.label :email %> </div>
+        <div class="col-sm-6">
+            <%= w.text_field :email, class: "form-control", placeholder: "example@yahoo.com", autuofocus: true%>
+        </div>
+    </div> 
+
+    <!-- new part starts here -->
+    <div class="form-group row">
+        <div  class="col-sm2 col-form-label"><%=w.label "Select Business"%></div>
+        <div class= "col-sm-6">
+            <%= w.select(:business, options_for_select([['Sole Trader','Sole Trader'],['Business Owner','Bussiness Owner'],['Looking for Employment','Looking for Employment']]))%>
+        </div>
+    </div>
+    <!-- new part finishes here -->
+    <!-- seventh row -->
+    <div class="form-group row">
+        <div  class="col-sm2 col-form-label"><%=w.label "Servies provided"%></div>
+        <div class= "col-sm-6">
+            <%= w.select(:business_type, options_for_select([['Air conditioning Specialist','air condition'],['Antenna Services','Antenna'],['Appliance Installation','appliance'],['appliance Repairer','repairer'],['flooring','flooring'],['Bathroom and Shower','bathroom'],['Tiling and Stone','tiling']]))%>
+        </div>
+    </div>
+
+    <!-- submit button -->
+    <div class="form-group row">
+        <div class="col-sm-10">
+            <%= w.submit class:"btn btn-primary btn-lg"%>
+        </div>
+     </div>
+<%end%>
+
+</div> <!-- end of Card-->
+
+<%=render"extras/footer"%>
