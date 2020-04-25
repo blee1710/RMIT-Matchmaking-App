@@ -1,22 +1,9 @@
-<nav class="navbar navbar-light bg-primary">
-    <a class="navbar-brand" href="#">RMIT MATCHWORKS</a>
-    <div class="custom-btn">
-        <% if user_signed_in? %>
-          <%= link_to "Profile", profile_pages_main_path, class:"btn btn-primary" %>
-        <% else %>
-          <%= link_to "Sign Up", new_user_registration_path, class:"btn btn-primary"%>
-          <%= link_to "Sign In", new_user_session_path, class: "btn btn-primary"%>
-        <% end %>
-    </div>
-</nav>
-<!-- end of Nav -->
-<%= render 'extras/notice'%>
 <div class="main-container">
     <%= image_tag("work.jpg", class:"w-100", alt:"main picture here") %>
     <div class="register-btn">
       <h1 class="main-title">Matches Professonals<h1>
       <h2 class="main-title">For your Task</h2>
-      
+
       <%= link_to "I want to Hire", new_task_path, class: "btn btn-primary"%>
       <%= link_to "I want to work", new_worker_path, class: "btn btn-primary"%>
     </div>
