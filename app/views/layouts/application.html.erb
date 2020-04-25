@@ -8,7 +8,13 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <%= render 'extras/nav' %>
-  <body>
-    <%= yield %>
-  </body>
+  <div class="main-container">
+    <body>
+      <div id="content-wrapper">
+        <%= yield %>
+      </div>
+    </body>
+    <%= render 'extras/footer'%>
+  </div>
+
 </html>

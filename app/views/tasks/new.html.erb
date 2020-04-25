@@ -1,4 +1,3 @@
-<%=render "extras/nav"%>
 <h3 class="sub-title">Create Your Add</h3>
 <div class="work-card">
 <%= form_for @tasks do |t| %>
@@ -18,10 +17,10 @@
         <div class="col-sm-6">
             <%= t.text_area :description, class: "form-control", placeholder: "try to explain about your task [400 charactes limitation]", rows: "12"%>
         </div>
-    </div>    
+    </div>
 
     <div class="form-group"><p class="task-info" >*Upload some photos</p> <%= link_to "upload photos", "#", class:"btn btn-success"%> </div>
- 
+
     <!-- new part start here -->
 
     <!-- third row -->
@@ -30,7 +29,7 @@
         <div class="col-sm-6">
             <%= t.select(:skills, options_for_select([['tiling', 'tiling'],['cleaning','cleaning'],['washing','washing']])) %>
         </div>
-    </div> 
+    </div>
 
     <!-- new part finishes here >
 
@@ -43,5 +42,3 @@
 <%end%>
 
 </div> <!-- end of Card-->
-
-<%=render "extras/footer"%>

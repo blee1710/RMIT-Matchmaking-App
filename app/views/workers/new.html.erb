@@ -1,5 +1,3 @@
-
-<%=render"extras/nav"%>
 <h3 class="sub-title"> Register Your Business Now </h3>
 <div class="work-card">
 <%= form_for @worker do |w| %>
@@ -17,7 +15,7 @@
         <div class="col-sm-6">
             <%= w.text_field :last_name, class: "form-control", placeholder: "last name", autuofocus: true%>
         </div>
-    </div>    
+    </div>
 
     <!-- third row -->
     <div class="form-group row">
@@ -25,21 +23,21 @@
         <div class="col-sm-6">
             <%= w.text_field :phone, class: "form-control", placeholder: "0450 44 24 24", autuofocus: true%>
         </div>
-    </div> 
+    </div>
     <!-- forth row -->
     <div class="form-group row">
         <div class="col-sm-2 col-form-label"> <%= w.label :post_code %> </div>
         <div class="col-sm-6">
             <%= w.text_field :post_code, class: "form-control", placeholder: "3019", autuofocus: true%>
         </div>
-    </div> 
+    </div>
     <!-- fifth row -->
     <div class="form-group row">
         <div class="col-sm-2 col-form-label"> <%= w.label :email %> </div>
         <div class="col-sm-6">
             <%= w.text_field :email, class: "form-control", placeholder: "example@yahoo.com", autuofocus: true%>
         </div>
-    </div> 
+    </div>
 
     <!-- new part starts here -->
     <div class="form-group row">
@@ -53,7 +51,7 @@
     <div class="form-group row">
         <div  class="col-sm2 col-form-label"><%=w.label "Servies provided"%></div>
         <div class= "col-sm-6">
-            <%= w.select(:business_type, options_for_select([['Air conditioning Specialist','air condition'],['Antenna Services','Antenna'],['Appliance Installation','appliance'],['appliance Repairer','repairer'],['flooring','flooring'],['Bathroom and Shower','bathroom'],['Tiling and Stone','tiling']]))%>
+            <%= w.select(:business_type, options_for_select([['Air Conditioning Specialist','air condition'],['Antenna Services','Antenna'],['Appliance Installation','appliance'],['appliance Repairer','repairer'],['Flooring','flooring'],['Bathroom and Shower','bathroom'],['Tiling and Stone','tiling']]))%>
         </div>
     </div>
 
@@ -66,5 +64,3 @@
 <%end%>
 
 </div> <!-- end of Card-->
-
-<%=render"extras/footer"%>
