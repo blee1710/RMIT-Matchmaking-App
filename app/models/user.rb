@@ -16,6 +16,11 @@ class User
 
   field :about,              type: String, default: ""
 
+  field :business,           type: String
+  field :business_type,      type: String
+
+  field :post_code,          type: Integer
+
   has_mongoid_attached_file :avatar
   validates_attachment_content_type :avatar,
    :content_type => ["image/jpg", "image/jpeg", "image/png", "image/gif"]
