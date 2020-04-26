@@ -31,8 +31,6 @@ gem 'jbuilder', '~> 2.7'
 
 gem "kt-paperclip", "~> 6.2.0"
 gem "mongoid-paperclip"
-
-
 #Font Awesome Gem
 gem 'font_awesome5_rails'
 

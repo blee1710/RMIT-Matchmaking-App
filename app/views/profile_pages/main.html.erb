@@ -3,7 +3,6 @@
 </div>
 <div class ="container d-flex justify-content-center">
   <div class="card" style="width: 18rem;">
-    <%= image_tag current_user.avatar(:original) unless current_user.avatar(:original).nil?%>
     <div class="card-body">
       <h5 class="card-title"><%= current_user.name %></h5>
       <p class="card-text"><%= current_user.about %></p>
