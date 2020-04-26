@@ -8,6 +8,8 @@
 *{
     box-sizing: border-box;
 }
+
+
 .navbar{
    height: 20%;
    background-color: var(--secondary-color) !important;
@@ -53,6 +55,21 @@
     margin: 1rem 0;
     text-align: center;
 }
+// this class is made to put the items in the middle of the scrren for the add and workers new pages
+.work-card{
+    margin-left: 20rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    text-align:center;
+}
+// this class is created to put the text in the right place on the page
+// this is for the new task page only
+.task-info{
+    text-align: left;
+    margin-left:10rem;
+    color:red;
+
+}
 .service{
     margin-top: 2rem;
     text-transform: uppercase;
@@ -75,10 +92,34 @@ position: relative;
 #search-img{
     opacity: 0.5;
 }
+#content-wrapper{
+  padding-bottom: 140px;
+}
 .footer{
-    height:120px;
+    position: absolute;
+    bottom: 0;
+    padding-top: 1.5rem;
+    text-align: center;
+    height:140px;
+    width: 100%;
+    color: white;
     background-color: rgba(0,0,0, 0.7);
 }
+// styling the items in the footer
+.fa-facebook-square{
+    color: #3b5998;
+    padding:0.3rem;
+}
+.fa-youtube-square{
+    color: #c4302b;
+    padding: 0.3rem;
+}
+.fa-twitter-square{
+    color:#00acee ;
+    padding:0.3rem;
+
+}
+
 .card{
     margin: 1rem 0;
 }

@@ -1,15 +1,9 @@
-<%= render 'layouts/extras/nav'%>
 <div class="container edit-border">
   <div class="custom-border">
     <h2>Edit <%= resource_name.to_s.humanize %></h2>
 
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
       <%= render "devise/shared/error_messages", resource: resource %>
-      <div class="field">
-          <%= f.label :avatar %>: <span class="asterisk">*</span><br />
-          <%=f.file_field :avatar, class: 'image_file_input' %>
-      </div>
-      <br/>
       <div class="field">
         <%= f.label :email %><br />
         <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
@@ -37,11 +31,27 @@
         <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
         <%= f.password_field :current_password, autocomplete: "current-password" %>
       </div>
+      <div class="field">
+              <%= f.label :post_code %>
+              <%= f.text_field :post_code, class: "form-control", placeholder: "3019", autuofocus: true%>
+      </div>
       <br/>
       <div class="field">
         <%= f.label :about %>: <span class="asterisk">*</span><br />
         <%= f.text_field :about, class: "form-control form-control-lg" %>
       </div>
+      <div class="field">
+          <%=f.label "Update Business" %>
+
+              <%= f.select(:business, options_for_select([['Sole Trader','Sole Trader'],['Business Owner','Bussiness Owner'],['Looking for Employment','Looking for Employment']]))%>
+      </div>
+      <!-- new part finishes here -->
+      <!-- seventh row -->
+      <div class="field">
+          <%=f.label "Update services provided"%>
+              <%= f.select(:business_type, options_for_select([['Air Conditioning Specialist','air condition'],['Antenna Services','Antenna'],['Appliance Installation','appliance'],['Appliance Repairs','repairer'],['Flooring','flooring'],['Bathroom and Shower','bathroom'],['Tiling and Stone','tiling']]))%>
+      </div>
+
       <br/>
       <div class="actions">
         <%= f.submit "Update" %>
