@@ -1,23 +1,36 @@
 class TasksController < ApplicationController
     def index
         @tasks= Task.all
-    end 
+    end
     def new
         @tasks= Task.new
-    end 
+    end
 
     def create
         @tasks = Task.new(tasks_params)
         if  @tasks.save
-            flash[:success]= "You have successully registerd your Business with us!"
-            redirect_to root_path
+            @recs = []
+            @recs |= recommend_workers
+            render 'workerlist'
         else
             render 'new'
-        end 
-    end 
+        end
+    end
 
-    private 
+    private
     def tasks_params
         params.require(:task).permit(:title, :description, :skills)
-    end 
-end 
+    end
+
+    def recommend_workers
+        workers = User.all
+        compatible = []
+        workers.each do |w|
+          if @tasks.skills == w.business_type
+            compatible.append(w)
+          end
+        end
+        return compatible
+    end
+
+end
