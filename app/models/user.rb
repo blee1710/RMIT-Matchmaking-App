@@ -1,6 +1,5 @@
 class User
   include Mongoid::Document
-  include Mongoid::Paperclip
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
@@ -16,9 +15,10 @@ class User
 
   field :about,              type: String, default: ""
 
-  has_mongoid_attached_file :avatar
-  validates_attachment_content_type :avatar,
-   :content_type => ["image/jpg", "image/jpeg", "image/png", "image/gif"]
+  field :business,           type: String
+  field :business_type,      type: String
+
+  field :post_code,          type: Integer
 
   ## Recoverable
   field :reset_password_token,   type: String

@@ -8,6 +8,8 @@
 *{
     box-sizing: border-box;
 }
+
+
 .navbar{
    height: 20%;
    background-color: var(--secondary-color) !important;
@@ -60,7 +62,7 @@
     margin-bottom: 2rem;
     text-align:center;
 }
-// this class is created to put the text in the right place on the page 
+// this class is created to put the text in the right place on the page
 // this is for the new task page only
 .task-info{
     text-align: left;
@@ -90,16 +92,20 @@ position: relative;
 #search-img{
     opacity: 0.5;
 }
+#content-wrapper{
+  padding-bottom: 140px;
+}
 .footer{
+    position: absolute;
+    bottom: 0;
     padding-top: 1.5rem;
     text-align: center;
     height:140px;
     width: 100%;
     color: white;
     background-color: rgba(0,0,0, 0.7);
-    margin-bottom: 0;
 }
-// styling the items in the footer 
+// styling the items in the footer
 .fa-facebook-square{
     color: #3b5998;
     padding:0.3rem;

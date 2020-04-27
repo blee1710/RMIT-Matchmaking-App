@@ -1,3 +1,3 @@
-class RegistrationController< Devise::RegistrationController
-    
+class RegistrationController< Devise::RegistrationsController
+
 end

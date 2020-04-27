@@ -1,4 +1,3 @@
-<%= render'extras/nav'%>
 <h2 class="sub-title">Welcome to Sign up page</h2>
 
 <div class="container"> <!-- start of container-->
@@ -6,7 +5,7 @@
   <div class="row custom-border"> <!-- start of row-->
 
   <div class="col-lg-6 col-md-6 col-xs-12">
-       <h3 class="sub-title"align="center">Terms and Condition</h3>
+       <h3 class="sub-title"align="center">Terms and Conditions</h3>
        <p> By signing up you will agree to our terms and conditions</p>
        <ul>
         <li>Our system is secure</li>
@@ -14,16 +13,11 @@
         <li>We use cookies for the better service providing</li>
         <li>For full detailed terms and conditions refer to link below</li>
        </ul>
-       <a href="#"> terms and condition document</a>
+       <a href="#"> T&C's here</a>
     </div>
     <div class="col-md-6 col-xs-12">
     <!-- start  of form-->
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-      <div class="field">
-          <%= f.label :avatar %>: <span class="asterisk">*</span><br />
-          <%=f.file_field :avatar, class: 'image_file_input' %>
-      </div>
-
       <div class="field">
         <%= f.label :name %>: <span class="asterisk">*</span><br />
         <%= f.text_field :name, class: "form-control form-control-lg" %>
@@ -53,9 +47,27 @@
       </div>
 
       <div class="field">
+              <%= f.label :post_code %>
+              <%= f.text_field :post_code, class: "form-control", placeholder: "3019", autuofocus: true%>
+      </div>
+
+      <div class="field">
         <%= f.label :about %>: <span class="asterisk">*</span><br />
         <%= f.text_field :about, class: "form-control form-control-lg" %>
       </div>
+
+      <div class="field">
+          <%=f.label "Select Business" %>
+
+              <%= f.select(:business, options_for_select([['Sole Trader','Sole Trader'],['Business Owner','Bussiness Owner'],['Looking for Employment','Looking for Employment']]))%>
+      </div>
+      <!-- new part finishes here -->
+      <!-- seventh row -->
+      <div class="field">
+          <%=f.label "Services Provided"%>
+              <%= f.select(:business_type, options_for_select([['Air Conditioning Specialist','air condition'],['Antenna Services','Antenna'],['Appliance Installation','appliance'],['Appliance Repairs','repairer'],['Flooring','flooring'],['Bathroom and Shower','bathroom'],['Tiling and Stone','tiling']]))%>
+      </div>
+
 
       <div class="actions">
       <br>

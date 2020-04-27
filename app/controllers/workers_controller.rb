@@ -1,24 +1,24 @@
 class WorkersController <ApplicationController
     def index
         @worker= Worker.all
-    end 
+    end
 
     def new
         @worker= Worker.new
-    end 
+    end
     def create
-        @worker = Worker.new(woker_params)
+        @worker = Worker.new(worker_params)
         if  @worker.save
-            flash[:success]= "You have successully registerd your Business with us!"
+            flash[:success]= "You have successully registered your Business with us!"
             redirect_to root_path
         else
             render 'new'
-        end 
-    end 
+        end
+    end
 
-    private 
+    private
     def woker_params
         params.require(:worker).permit(:name, :last_name, :phone, :post_code, :email, :business, :business_type)
-    end 
+    end
 
-end 
+end

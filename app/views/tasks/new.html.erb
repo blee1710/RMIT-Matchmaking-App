@@ -1,36 +1,37 @@
-<%=render "extras/nav"%>
-<h3 class="sub-title">Create Your Add</h3>
+<h3 class="sub-title">Create Your Ad</h3>
 <div class="work-card">
 <%= form_for @tasks do |t| %>
-    <p class="task-info">*choose a name for your project or task </p>
     <div class="form-group row">
         <div class="col-sm-2 col-form-label">
             <%= t.label :title, class:"text-center" %>
         </div>
         <div class="col-sm-6">
-            <%= t.text_field :title, class: "form-control", placeholder: "please choose a proper name for your task", autuofocus: true%>
+            <%= t.text_field :title, class: "form-control", placeholder: "Name of Task", autuofocus: true%>
+            <!-- <small> choose a name for your project or task</small> -->
         </div>
     </div>
-    <p class="task-info">*Tell us more about your task, what needs to be done<br> simple description in a few lines</p>
     <!-- second row -->
     <div class="form-group row">
         <div class="col-sm-2 col-form-label"> <%= t.label :description %> </div>
         <div class="col-sm-6">
-            <%= t.text_area :description, class: "form-control", placeholder: "try to explain about your task [400 charactes limitation]", rows: "12"%>
+            <%= t.text_area :description, class: "form-control", placeholder: "Explain your task in 400 characters or less.", rows: "12"%>
+            <small> Tell us more about your task and what needs to be done!</small>
         </div>
-    </div>    
+    </div>
 
-    <div class="form-group"><p class="task-info" >*Upload some photos</p> <%= link_to "upload photos", "#", class:"btn btn-success"%> </div>
- 
+    <!-- <div class="form-group"><p class="task-info" >*Upload some photos</p> <%= link_to "upload photos", "#", class:"btn btn-success"%> </div> -->
+
     <!-- new part start here -->
 
     <!-- third row -->
     <div class="form-group row">
         <div class="col-sm-2 col-form-label"> <%= t.label "Skills required" %> </div>
         <div class="col-sm-6">
-            <%= t.select(:skills, options_for_select([['tiling', 'tiling'],['cleaning','cleaning'],['washing','washing']])) %>
+            <%= t.select(:skills, options_for_select([['Air Conditioning Repairs','air condition'],
+            ['Antenna Services','Antenna'],['Appliance Installation','appliance'],['Appliance Repairs','repairer'],
+            ['Flooring','flooring'],['Bathroom and Shower','bathroom'],['Tiling and Stone','tiling']]))%>
         </div>
-    </div> 
+    </div>
 
     <!-- new part finishes here >
 
@@ -43,5 +44,3 @@
 <%end%>
 
 </div> <!-- end of Card-->
-
-<%=render "extras/footer"%>
