@@ -45,5 +45,13 @@ class User
   # field :unlock_token,    type: String # Only if unlock strategy is :email or :both
   # field :locked_at,       type: Time
 
+  validates :name, presence: true, length: { maximum: 50 }
+  VALID_PHONE_REGEX=/((04)|4|(\+614)[0-9]{8})/i
+  validates :phone, presence: true, format: { with: VALID_PHONE_REGEX}
+  VALID_EMAIL_REGEX=/\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i
+  validates :email, presence: true, length: { maximum: 255 }, format: { with: VALID_EMAIL_REGEX}, uniqueness: { case_sensitive: false}
+  VALID_POSTCODE_REGEX=/((0([2-3]|[8-9])[0-9]{2})|[1-9][0-9]{3})/i
+  validates :post_code, presence: true, format: { with:VALID_POSTCODE_REGEX}
+  validates :about, presence: true
 
 end
