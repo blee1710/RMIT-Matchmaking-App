@@ -9,7 +9,7 @@
     <ul>
     <a href="#" class="close" data-dismiss="alert"> &#215;</a>
       <% resource.errors.full_messages.each do |attribute, message| %>
-        <li><%= "#{attribute} #{message}" if resource.errors[attribute].first == message  %></li>
+        <li><%= attribute  %></li>
       <% end %>
     </ul>
   </div>
