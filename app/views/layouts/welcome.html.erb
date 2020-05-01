@@ -3,9 +3,10 @@
     <div class="register-btn">
       <h1 class="main-title">Matches Professonals<h1>
       <h2 class="main-title">For your Task</h2>
-
-      <%= link_to "Hire Someone", new_task_path, class: "btn btn-primary"%>
-      <%# <%= link_to "I want to work", new_worker_path, class: "btn btn-primary"%>
+      <% unless user_signed_in? %>
+        <%= link_to "Hire Someone", new_task_path, class: "btn btn-primary"%>
+        <%# <%= link_to "I want to work", new_worker_path, class: "btn btn-primary"%>
+      <% end %>
     </div>
 </div>
 <!-- services section starts here -->
@@ -41,7 +42,7 @@
 <!-- services section finishes here -->
 
 <!-- search bar starts here  -->
-<h3 class="sub-title">Search for treade or  Work </h3>
+<h3 class="sub-title">Search for trade or  Work </h3>
 <div class="search-container">
   <%= image_tag("bg.jpg", id: "search-img", width: "100%", height:"200px")%>
   <div class="search-form">
