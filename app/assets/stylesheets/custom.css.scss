@@ -138,7 +138,7 @@ position: relative;
 .alert-success, .alert-danger{
     margin-bottom: 0;
 }
-// styling the tasks partical 
+// styling the tasks partical
 .tasks-card{
     border:1px solid var(--color-gray);
     border-radius: 8px;
@@ -164,3 +164,7 @@ position: relative;
     font-weight: 800;
 }
 
+// index formatting
+.index-container{
+    margin: 1rem 0;
+}
