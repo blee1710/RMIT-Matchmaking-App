@@ -34,6 +34,10 @@ gem "mongoid-paperclip"
 #Font Awesome Gem
 gem 'font_awesome5_rails'
 
+# Pagination gems
+gem "will_paginate_mongoid"
+gem 'will_paginate-bootstrap4'
+
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 
