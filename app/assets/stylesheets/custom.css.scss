@@ -96,7 +96,6 @@ position: relative;
   padding-bottom: 140px;
 }
 .footer{
-    position: absolute;
     bottom: 0;
     padding-top: 1.5rem;
     text-align: center;
@@ -138,4 +137,34 @@ position: relative;
 }
 .alert-success, .alert-danger{
     margin-bottom: 0;
+}
+// styling the tasks partical
+.tasks-card{
+    border:1px solid var(--color-gray);
+    border-radius: 8px;
+    width:30%;
+    margin-left:5px;
+    padding:5px 10px;
+    background-color: rgba(255,153,0, 0.2);
+}
+.task-title{
+    color: var(--primary-color);
+}
+.worker-title{
+    color: var(--secondary-color);
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.card-header{
+    background-color: var(--primary-color);
+}
+.task-title{
+    color:var(--primary-color);
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
+// index formatting
+.index-container{
+    margin: 1rem 0;
 }
