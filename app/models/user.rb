@@ -18,7 +18,7 @@ class User
   field :business,           type: String
   field :business_type,      type: String
 
-  field :post_code,          type: Integer
+  field :location,          type: String
 
   ## Recoverable
   field :reset_password_token,   type: String
@@ -50,8 +50,6 @@ class User
   validates :phone, presence: true, format: { with: VALID_PHONE_REGEX}
   #VALID_EMAIL_REGEX=/\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i
   #validates :email, presence: true, length: { maximum: 255 }, format: { with: VALID_EMAIL_REGEX}, uniqueness: { case_sensitive: false}
-  VALID_POSTCODE_REGEX=/(0([2-3]|[8-9])[0-9]{2})|[1-9][0-9]{3}/i
-  validates :post_code, presence: true, format: { with:VALID_POSTCODE_REGEX}
   validates :about, presence: true
 
 end
