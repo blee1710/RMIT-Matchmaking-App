@@ -18,7 +18,7 @@ class WorkersController <ApplicationController
 
     private
     def woker_params
-        params.require(:worker).permit(:name, :last_name, :phone, :post_code, :email, :business, :business_type)
+        params.require(:worker).permit(:name, :last_name, :phone, :location, :email, :business, :business_type)
     end
 
 end
