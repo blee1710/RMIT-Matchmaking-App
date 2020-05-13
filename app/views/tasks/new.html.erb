@@ -24,7 +24,7 @@
 
     <!-- new part start here -->
 
-    <!-- third row -->
+    <!-- third row >
     <div class="form-group row">
         <div class="col-sm-2 col-form-label"> <%= t.label "Skills required" %> </div>
         <div class="col-sm-6">
@@ -34,7 +34,20 @@
         </div>
     </div>
 
-    <!-- new part finishes here >
+    < new part finishes here-- >
+
+    <!-- multiple checkbox starts here-->
+        <div class="col-sm-2 col-form-label"> <%= t.label "Skills required" %> </div>
+        
+        <%= check_box_tag 'task[skills][]', 'tiling', checked('tiling'), id: 'tiling_skills' %>
+        <%= label_tag 'tiling_skills', 'tiling' %> <br>
+        
+        <%= check_box_tag 'task[skills][]', 'flooring', checked('flooring'), id: 'floor_skills' %>
+        <%= label_tag 'floor_skills', 'flooring' %> <br>
+
+        <%= check_box_tag 'task[skills][]', 'cleaning', checked('cleaning'), id: 'cleaning_skills' %>
+        <%= label_tag 'cleaning_skills', 'cleaning' %> <br>
+    <!-- multiple checkbox finishes here -->
 
     <!-- submit button -->
     <div class="form-group row">

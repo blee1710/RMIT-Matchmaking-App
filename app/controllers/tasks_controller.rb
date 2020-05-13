@@ -19,7 +19,7 @@ class TasksController < ApplicationController
 
     private
     def tasks_params
-        params.require(:task).permit(:title, :description, :skills)
+        params.require(:task).permit(:title, :description, skills: [])
     end
 
     def recommend_workers

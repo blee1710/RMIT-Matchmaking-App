@@ -1,6 +1,8 @@
 class Task
   include Mongoid::Document
-
+  before_save do
+    self.skills.gsub!(/[\[\]\"]/, "") if attribute_present?("skills")
+  end
   field :title, type: String
   field :description, type: String
   field :skills, type: String
