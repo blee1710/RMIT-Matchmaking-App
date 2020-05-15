@@ -3,6 +3,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.7.0'
 
+gem 'active_model_serializers'
 #MongoDB Gems
 gem 'mongoid', '~> 7.0.5'
 # uing devise for the user authentication

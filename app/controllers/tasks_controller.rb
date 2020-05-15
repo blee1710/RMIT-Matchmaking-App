@@ -11,6 +11,7 @@ class TasksController < ApplicationController
         if  @tasks.save
             @recs = []
             @recs |= recommend_workers
+
             render 'workerlist'
         else
             render 'new'
@@ -25,11 +26,32 @@ class TasksController < ApplicationController
     def recommend_workers
         workers = User.all
         compatible = []
+        requireSkill = @tasks.skills.split(", ")
+        
+        #changed algorithm in here, still not working ----Shotto
         workers.each do |w|
-          if @tasks.skills == w.business_type
-            compatible.append(w)
-          end
+            
+            workerSkill=w.business_type.split(", ")
+            puts workerSkill
+            i = 0
+            #compatible.append(w) if !(requireSkill & workerSkill).empty?
+            requireSkill.each do |skill|
+                if workerSkill.include?(skill)
+                    if i==requireSkill.length()-1
+                        puts w.name
+                        compatible.append(w)
+                    else
+                        i=i+1
+                        puts i
+                        next
+                    end
+                else
+                    break
+                end
+            end
+
         end
+        
         return compatible
     end
 
