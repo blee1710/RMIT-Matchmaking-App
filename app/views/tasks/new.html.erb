@@ -24,7 +24,7 @@
 
     <!-- new part start here -->
 
-    <!-- third row -->
+    <!-- third row >
     <div class="form-group row">
         <div class="col-sm-2 col-form-label"> <%= t.label "Skills required" %> </div>
         <div class="col-sm-6">
@@ -34,7 +34,32 @@
         </div>
     </div>
 
-    <!-- new part finishes here >
+    < new part finishes here-- >
+
+    <!-- multiple checkbox starts here-->
+        <div class="col-sm-2 col-form-label"> <%= t.label "Skills required" %> </div>
+        
+        <%= check_box_tag 'task[skills][]', 'Air conditioning', checked('Air conditioning'), id: 'air_conditioning_skills' %>
+        <%= label_tag 'air_conditioning_skills', 'Air conditioning' %> <br>
+        
+        <%= check_box_tag 'task[skills][]', 'Antenna Services', checked('Antenna Services'), id: 'antenna_services_skills' %>
+        <%= label_tag 'antenna_services_skills', 'Antenna Services' %> <br>
+
+        <%= check_box_tag 'task[skills][]', 'Appliance Installation', checked('Appliance Installation'), id: 'appliance_installation_skills' %>
+        <%= label_tag 'appliance_installation_skills', 'Appliance Installation' %> <br>
+
+        <%= check_box_tag 'task[skills][]', 'Appliance Repairs', checked('Appliance Repairs'), id: 'appliance_repairs_skills' %>
+        <%= label_tag 'appliance_repairs_skills', 'Appliance Repairs' %> <br>
+
+        <%= check_box_tag 'task[skills][]', 'Flooring', checked('Flooring'), id: 'flooring_skills' %>
+        <%= label_tag 'flooring_skills', 'Flooring' %> <br>
+
+        <%= check_box_tag 'task[skills][]', 'Bathroom and Shower', checked('Bathroom and Shower'), id: 'bathroom_and_shower_skills' %>
+        <%= label_tag 'bathroom_and_shower_skills', 'Bathroom and Shower' %> <br>
+
+        <%= check_box_tag 'task[skills][]', 'Tiling and Stone', checked('Tiling and Stone'), id: 'tiling_and_stone_skills' %>
+        <%= label_tag 'tiling_and_stone_skills', 'Tiling and Stone' %> <br>
+    <!-- multiple checkbox finishes here -->
 
     <!-- submit button -->
     <div class="form-group row">
