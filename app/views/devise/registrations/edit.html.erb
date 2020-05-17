@@ -32,8 +32,8 @@
         <%= f.password_field :current_password, autocomplete: "current-password" %>
       </div>
       <div class="field">
-              <%= f.label :post_code %>
-              <%= f.text_field :post_code, class: "form-control", placeholder: "3019", autuofocus: true%>
+              <%= f.label :location %>
+              <%= f.text_field :location, class: "form-control", placeholder: "", autuofocus: true%>
       </div>
       <br/>
       <div class="field">
@@ -49,7 +49,40 @@
       <!-- seventh row -->
       <div class="field">
           <%=f.label "Update services provided"%>
-              <%= f.select(:business_type, options_for_select([['Air Conditioning Specialist','air condition'],['Antenna Services','Antenna'],['Appliance Installation','appliance'],['Appliance Repairs','repairer'],['Flooring','flooring'],['Bathroom and Shower','bathroom'],['Tiling and Stone','tiling']]))%>
+          <a class="btn btn-primary card-header" data-toggle="collapse" href="#collapseExample" role="button" aria-expaneded="false" aria-controls="collapseExample">Skills Select</a>
+          
+          <div id="collapseExample" class="collapse">
+            <div class="card card-body">
+                  <div class="inline-block">
+                    <%= f.check_box :business_type, {multiple: true}, 'Air conditioning', false %>
+                    <%= 'Air conditioning' %>
+                  </div>
+                  <div class="inline-block">
+                    <%= f.check_box :business_type, {multiple: true}, 'Antenna Services', false %>
+                    <%= 'Antenna Services' %>
+                  </div>
+                  <div class="inline-block">
+                    <%= f.check_box :business_type, {multiple: true}, 'Appliance Installation', false %>
+                    <%= 'Appliance Installation' %>
+                  </div>
+                  <div class="inline-block">
+                    <%= f.check_box :business_type, {multiple: true}, 'Appliance Repairs', false %>
+                    <%= 'Appliance Repairs' %>
+                  </div>
+                  <div class="inline-block">
+                    <%= f.check_box :business_type, {multiple: true}, 'Flooring', false %>
+                    <%= 'Flooring' %>
+                  </div>
+                  <div class="inline-block">
+                    <%= f.check_box :business_type, {multiple: true}, 'Bathroom and Shower', false %>
+                    <%= 'Bathroom and Shower' %>
+                  </div>
+                  <div class="inline-block">
+                    <%= f.check_box :business_type, {multiple: true}, 'Tilling and Stone', false %>
+                    <%= 'Tilling and Stone' %>
+                  </div>
+            </div>
+          </div>
       </div>
 
       <br/>

@@ -2,6 +2,7 @@
 <%=render 'tasks'%>
 
 <h3 class="sub-title">Workers which may suit your task</h3>
+
 <ul class="list-group list-group-horizontal justify-content-center">
   <% @recs.each do |w| %>
   <div class="card mb-3" style="width: 540px;">
@@ -12,7 +13,7 @@
         <div class="card-body">
           <h5 class="card-title"><%= w.name %></h5>
           <p class="card-text"><%= w.about %></p>
-          <p class="card-text"><small class="text-muted">Post Code: <%= w.post_code %> <br>Phone: <%= w.phone %> </small></p>
+          <p class="card-text"><small class="text-muted">Location: <%= w.location %> <br>Phone: <%= w.phone %> </small></p>
         </div>
       </div>
     </div>
