@@ -1,5 +1,8 @@
 class Task
   include Mongoid::Document
+
+  belongs_to :user, optional: true
+
   before_save do
     self.skills.gsub!(/[\[\]\"]/, "") if attribute_present?("skills")
   end

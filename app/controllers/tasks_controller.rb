@@ -1,4 +1,8 @@
 class TasksController < ApplicationController
+    def show
+      render 'layouts/welcome'
+    end
+
     def index
         @tasks= Task.paginate(page: params[:page], per_page: 10)
     end
@@ -18,6 +22,19 @@ class TasksController < ApplicationController
         end
     end
 
+    def assign
+      @task = Task.find(params[:taskid])
+      @user = User.find(params[:userid])
+
+      @task.user = @user
+
+      @task.save
+
+      p 'ive been called'
+
+      redirect_to root_path
+    end
+
     private
     def tasks_params
         params.require(:task).permit(:title, :description, skills: [])
@@ -27,10 +44,10 @@ class TasksController < ApplicationController
         workers = User.all
         compatible = []
         requireSkill = @tasks.skills.split(", ")
-        
+
         #changed algorithm in here, still not working ----Shotto
         workers.each do |w|
-            
+
             workerSkill=w.business_type.split(", ")
             puts workerSkill
             i = 0
@@ -51,7 +68,7 @@ class TasksController < ApplicationController
             end
 
         end
-        
+
         return compatible
     end
 
