@@ -180,15 +180,18 @@ position: relative;
 }
 // styling the profile card (which is the side bar)
 .profile-card{
-    width:15%;
+    width:45%;
     height:60vh;
     background-color:var(--color-gray);
     border: 1px solid, black ;
     border-radius: 10px;
-    position: fixed;
     top:70px;
-    left:0px; 
+    left:0px;
     a{
         margin-left: 40px;
     }
+}
+
+.profile-details {
+  margin-left: 19.5rem;
 }

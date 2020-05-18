@@ -14,7 +14,7 @@
           <h5 class="card-title"><%= w.name %></h5>
           <p class="card-text"><%= w.about %></p>
           <p class="card-text"><small class="text-muted">Location: <%= w.location %> <br>Phone: <%= w.phone %> <br> Skills: <%= w.business_type %> </small></p>
-          <%= link_to "Assign Task", assign_task_path(:taskid => @tasks.id, :userid => w.id), method: :patch %>
+          <%= link_to "Assign Task", assign_task_path(:t => @tasks.title, :p => @tasks.phone, :d => @tasks.description, :s => @tasks.skills, :userid => w.id), method: :post %>
         </div>
       </div>
     </div>

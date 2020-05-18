@@ -12,7 +12,8 @@ class TasksController < ApplicationController
 
     def create
         @tasks = Task.new(tasks_params)
-        if  @tasks.save
+        if  @tasks.valid?
+            @tasks.skills.gsub!(/[\[\]\"]/, "")
             @recs = []
             @recs |= recommend_workers
 
@@ -23,21 +24,15 @@ class TasksController < ApplicationController
     end
 
     def assign
-      @task = Task.find(params[:taskid])
       @user = User.find(params[:userid])
-
-      @task.user = @user
-
-      @task.save
-
-      p 'ive been called'
-
+      @task = Task.create(:title => params[:t], :phone => params[:p], :description => params[:d], :skills => params[:s], :user => @user)
+      flash[:notice] = "You have successully requested #{@user.name} to complete your task! They will be in contact with you."
       redirect_to root_path
     end
 
     private
     def tasks_params
-        params.require(:task).permit(:title, :description, skills: [])
+        params.require(:task).permit(:title, :phone, :description, skills: [])
     end
 
     def recommend_workers
@@ -49,17 +44,14 @@ class TasksController < ApplicationController
         workers.each do |w|
 
             workerSkill=w.business_type.split(", ")
-            puts workerSkill
             i = 0
             #compatible.append(w) if !(requireSkill & workerSkill).empty?
             requireSkill.each do |skill|
                 if workerSkill.include?(skill)
                     if i==requireSkill.length()-1
-                        puts w.name
                         compatible.append(w)
                     else
                         i=i+1
-                        puts i
                         next
                     end
                 else

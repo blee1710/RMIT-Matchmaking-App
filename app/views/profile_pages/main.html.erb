@@ -1,17 +1,23 @@
 <div class ="d-flex justify-content-center">
   <h1>Your Profile</h1>
-  <%= render 'extras/sidebar'%>
 </div>
-<div class ="container d-flex justify-content-center">
-  <div class="card" style="width: 18rem;">
-    <div class="card-body">
-      <h5 class="card-title">Trade Name: <%= current_user.name %></h5>
-      <p class="card-text">Trade About: <%= current_user.about %></p>
-      <p class="card-text">Email: <%= current_user.email %></p>
-      <p class="card-text">Location: <%= current_user.location %></p>
-      <p class="card-text">Trade Skills: 
-          <%= current_user.business_type %>
-      </p>
+<div class='row'>
+  <div class='col-sm-3'>
+    <%= render 'extras/sidebar'%>
+  </div>
+  <div class='col-9'>
+    <div class ="d-flex">
+      <div class="card profile-details" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">Name: <%= current_user.name %></h5>
+          <p class="card-text">About: <%= current_user.about %></p>
+          <p class="card-text">Email: <%= current_user.email %></p>
+          <p class="card-text">Location: <%= current_user.location %></p>
+          <p class="card-text">Trade Skills:
+              <%= current_user.business_type %>
+          </p>
+        </div>
+      </div>
     </div>
   </div>
 </div>

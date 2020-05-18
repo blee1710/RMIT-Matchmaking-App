@@ -1,12 +1,6 @@
-<div class="row">
-    <div class= "col">
-        <div class="profile-card">
-        <h6 class="sub-title">More Options</h6>
-        <hr>
-           <%= link_to "View Tasks", tasks_path%><br><br>
-           <%= link_to("Edit Profile", edit_user_registration_path)%><br><br>
-           <%= link_to "Other Trades", "#"%> <br><br>
-           <%= link_to "Job History", "#"%>
-        </div>
-    </div> <!-- end of col -->
+<div class="profile-card">
+    <h6 class="sub-title">More Options</h6>
+    <hr>
+      <%= link_to("Edit Profile", edit_user_registration_path)%><br><br>
+      <%= link_to "Job Requests", requests_path%>
 </div>
