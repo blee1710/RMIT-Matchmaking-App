@@ -11,6 +11,15 @@
             <!-- <small> choose a name for your project or task</small> -->
         </div>
     </div>
+    <div class="form-group row">
+        <div class="col-sm-2 col-form-label">
+            <%= t.label :phone, class:"text-center" %>
+        </div>
+        <div class="col-sm-6">
+            <%= t.text_field :phone, class: "form-control", placeholder: "Phone No.", autuofocus: true%>
+            <!-- <small> choose a name for your project or task</small> -->
+        </div>
+    </div>
     <!-- second row -->
     <div class="form-group row">
         <div class="col-sm-2 col-form-label"> <%= t.label :description %> </div>
@@ -38,10 +47,10 @@
 
     <!-- multiple checkbox starts here-->
         <div class="col-sm-2 col-form-label"> <%= t.label "Skills required" %> </div>
-        
+
         <%= check_box_tag 'task[skills][]', 'Air conditioning', checked('Air conditioning'), id: 'air_conditioning_skills' %>
         <%= label_tag 'air_conditioning_skills', 'Air conditioning' %> <br>
-        
+
         <%= check_box_tag 'task[skills][]', 'Antenna Services', checked('Antenna Services'), id: 'antenna_services_skills' %>
         <%= label_tag 'antenna_services_skills', 'Antenna Services' %> <br>
 
