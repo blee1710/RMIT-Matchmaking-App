@@ -1,4 +1,4 @@
-module Services_Data
+module ServicesData
     Activities=[
         'Air Conditioning',
         'Antenna Services',
