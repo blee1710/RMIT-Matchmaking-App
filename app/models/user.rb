@@ -5,6 +5,8 @@ class User
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
+  embeds_many :tasks
+
   ## Database authenticatable
   field :id,                 type:Integer
   field :name,               type: String, default:""
@@ -45,11 +47,16 @@ class User
   # field :unlock_token,    type: String # Only if unlock strategy is :email or :both
   # field :locked_at,       type: Time
 
+  before_save do
+    self.business_type.gsub!(/[\[\]\"]/, "")if attribute_present?("business_type")
+  end
+
   validates :name, presence: true, length: { maximum: 50 }
   VALID_PHONE_REGEX=/(\+614|04|(04))[0-9]{8}/
   validates :phone, presence: true, format: { with: VALID_PHONE_REGEX}
   #VALID_EMAIL_REGEX=/\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i
   #validates :email, presence: true, length: { maximum: 255 }, format: { with: VALID_EMAIL_REGEX}, uniqueness: { case_sensitive: false}
   validates :about, presence: true
+  #validates :business_type, presence: true
 
 end

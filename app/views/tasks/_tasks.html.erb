@@ -4,10 +4,12 @@
         <div class="col-md-8">
             <div class="card-body">
                 <h5 class="card-title"><h6 class="task-title">Task Title: </h6><%= @tasks.title %>
+                <p class="card-text"><h6 class="task-title">Contact Number: </h6><%= @tasks.phone %>
                 <p class="card-text"><h6 class="task-title">Task Description: </h6><%= @tasks.description %>
-                <p class="card-text"><h6 class="task-title">Skills Required: </h6><%= @tasks.skills %></p>
+                <p class="card-text"><h6 class="task-title">Skills Required: </h6>
+                    <%= @tasks.skills%>
+                </p>
             </div>
         </div>
     </div>
 </div>
-

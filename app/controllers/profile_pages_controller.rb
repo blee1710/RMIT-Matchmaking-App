@@ -1,4 +1,9 @@
 class ProfilePagesController < ApplicationController
-  def main
+  def requests
+
+    @tasks = current_user.tasks
+    
+    render 'requests'
+
   end
 end
