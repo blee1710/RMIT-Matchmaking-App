@@ -1,26 +1,33 @@
 <h3  class="sub-title">Your Requests</h3>
-<h6 class="sub-title"> These people require your services. Get in contact now to get working!</h4>
+<% if @tasks.empty? %>
+  <h6 class="sub-title"> You have no requests. Make sure your profile is updated and soon you will get working!</h6>
+<% else %>
+  <h6 class="sub-title"> These people require your services. Get in contact now to get working!</h6>
+<% end %>
 <div class="container">
   <div class="row d-flex justify-content-center">
   </div>
     <div class="row">
-      <% @tasks.each do |w| %>
-      <div class="col">
-        <div class="card mb-3" style="width: 540px;">
-        <div class="card-header"> <!-- dummy div to style the card-->
-        </div>
-          <div class="row no-gutters">
-            <div class="col-md-8">
-              <div class="card-body">
-                <h5 class="card-title"><%= w.title %></h5>
-                <p class="card-text">Description: <%= w.description %></p>
-                <p class="card-text">Skills Required: <%= w.skills %></p>
-                <p class="card-text">Contact Number: <%= w.phone %></p>
+      <% if @tasks.empty? %>
+        <% else %>
+        <% @tasks.each do |w| %>
+          <div class="col">
+            <div class="card mb-3" style="width: 540px;">
+            <div class="card-header"> <!-- dummy div to style the card-->
+            </div>
+              <div class="row no-gutters">
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title"><%= w.title %></h5>
+                    <p class="card-text">Description: <%= w.description %></p>
+                    <p class="card-text">Skills Required: <%= w.skills %></p>
+                    <p class="card-text">Contact Number: <%= w.phone %></p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </div>
+        <% end %>
       <% end %>
     </div>
   <div class="row d-flex justify-content-center">
